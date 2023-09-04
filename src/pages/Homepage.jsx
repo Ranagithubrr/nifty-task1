@@ -40,7 +40,7 @@ const Homepage = () => {
                             {
                                 error && <span className='block text-red-800 text-center'>There is an error to fetch Data</span>
                             }
-                            <div className='grid grid-cols-4 gap-2 p-4'>
+                            <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-2 p-4'>
                                 {
                                     products.map((ele) => {
                                         return (

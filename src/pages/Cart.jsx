@@ -37,13 +37,13 @@ const Cart = () => {
     }, [cart]);
 
     return (
-        <div className='rounded border shadow mt-5 sticky top-5 p-2 w-2/3 m-auto'>
+        <div className='rounded border shadow mt-5 sticky top-5 p-2 w-full md:w-2/3 m-auto'>
             <h4 className='font-semibold text-2xl text-center'>Cart</h4>
             <span className='font-semibold text-sm block text-center'>Added Items</span>
             {/* single item start*/}
             <div className='border p-2'>
                 <div className='flex py-1'>
-                    <div className='w-1/5'>
+                    <div className='w-1/6 lg:w-1/5'>
                         <span className='block text-sm font-bold'>SL</span>
                     </div>
                     <div className='w-1/5'>
@@ -55,7 +55,7 @@ const Cart = () => {
                     <div className='w-1/5'>
                         <span className='block text-sm font-bold'>Quantity</span>
                     </div>
-                    <div className='w-1/5'>
+                    <div className='w-2/5 lg:w-1/5'>
                         <span className='block text-sm font-bold'>Action</span>
                     </div>
                     <div className='w-1/5'>
@@ -70,7 +70,7 @@ const Cart = () => {
                             const { id, name, price, quantity } = ele;
                             return (
                                 <div className='flex py-1'>
-                                    <div className='w-1/5'>
+                                    <div className='w-1/6 lg:w-1/5'>
                                         <span className='block text-sm font-semibold'>{index + 1}</span>
                                     </div>
                                     <div className='w-1/5'>
@@ -82,7 +82,7 @@ const Cart = () => {
                                     <div className='w-1/5'>
                                         <span className='block text-sm font-semibold'>{quantity}</span>
                                     </div>
-                                    <div className='w-1/5'>
+                                    <div className='w-2/5 lg:w-1/5'>
                                         <button className='bg-gray-200 px-2 rounded font-bold' onClick={() => DecreaseClicked(id)}>-</button>
                                         <button className='px-3'>{quantity}</button>
                                         <button className='bg-gray-200 px-2 rounded font-bold' onClick={() => IncreaseClicked(id)}>+</button>
@@ -100,7 +100,7 @@ const Cart = () => {
             {
                 cart.length !== 0 && <>
 
-                    <div className='border-t-2 w-1/2 ml-auto mt-5'>
+                    <div className='border-t-2 w-full lg:w-1/2 ml-auto mt-5'>
                         <div className='flex justify-between'>
                             <div>
                                 <span className='block text-sm font-semibold'>Net Total</span>
